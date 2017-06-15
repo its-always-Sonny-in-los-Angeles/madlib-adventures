@@ -1,0 +1,72 @@
+@media screen and (max-width: 950px) {
+    .view {
+        padding: 0 20px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    h1 {
+        @include fontSize(36);
+    }
+    .storyList {
+        flex-direction: column;
+        align-items: center;
+        div {
+            width: 55%;
+            max-height: 22vh;
+            margin-bottom: 10px;
+        }
+        button {
+            @include fontSize(22);
+        }
+    }
+    .choices {
+        flex-wrap: wrap;
+        button {
+            width: 40%;
+        }
+        button:nth-of-type(2n) {
+            margin-right: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 470px) {
+    h1 {
+        @include fontSize(26);
+    }
+    h2 {
+        @include fontSize(23);
+    }
+    .sub-header {
+        @include fontSize(16);
+        margin: 10px 0;
+    }
+
+    .storyList {
+        display: block;
+        max-height: 60vh;
+	    overflow: auto;
+        box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.25);
+
+        div {
+            margin: 10px auto;
+        }
+    }
+
+    .characterView {
+        .characterCreate {
+            margin-left: 0;
+            margin-right: 0;
+        }
+        .attributes {
+            width: 90%;
+        }
+    }
+
+    .storyView {
+        button {
+            padding: 7px 5px;
+        }
+    }
+}

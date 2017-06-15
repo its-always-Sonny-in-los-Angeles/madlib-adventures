@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Madlib Adventures</title>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,800|Roboto" rel="stylesheet">
+	<link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+	<div class="view homeView">
+		<div class="wrapper">
+			<h1>Madlib Adventures</h1>
+			<p class="sub-header">Ready to go on a cool adventure? Choose from one below:</p>
+			<div class="storyList">
+				<div>
+					<img src="assets/zombie.png" alt="">
+					<button class="story story1 gif"></button>
+				</div>
+				<div class="comingSoon">
+					<button>Coming soon</button>
+				</div>
+				<div class="comingSoon">
+					<button>Coming soon</button>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="view characterView hidden">
+		<div class="wrapper">
+			<h2 class="zombieTitle">Hacker Dead</h2>
+			<p class="sub-header italicize">Are you ready for this?</p>
+			<form action="" class="characterCreate">
+				<label for="name">Name</label>
+				<input name="name" type="text" placeholder="Enter your name" required>
+				<div class="points">
+					<!-- This empty div will hold the dynamically added available points -->
+				</div>
+				<div class="attributes strength">
+					<label for="strength">Strength</label>
+					<div class="attribute-selector">
+						<button class="increment-button decrease">-</button>
+						<input type="text" value="2" name="strength" disabled>
+						<button class="increment-button increase">+</button>
+					</div>
+				</div>
+				<div class="attributes speed">
+					<label for="speed">Speed</label>
+					<div class="attribute-selector">
+						<button class="increment-button decrease">-</button>
+						<input type="text" value="2" name="speed" disabled>
+						<button class="increment-button increase">+</button>
+					</div>
+				</div>
+
+				<div class="attributes charisma">
+					<label for="charisma">Charisma</label>
+					<div class="attribute-selector">
+						<button class="increment-button decrease">-</button>
+						<input type="text" value="2" name="charisma" disabled>
+						<button class="increment-button increase">+</button>
+					</div>
+				</div>
+				<button class="character-button">Create Character</button>
+			</form>
+		</div>
+	</div>
+
+	<div class="view storyView hidden">
+		<div class="wrapper storyWrapper">
+			<div class="content">
+				<p class="content__story"></p>
+			</div>
+			<div class="choices">
+
+			</div>
+		</div>
+	</div>
+
+	<div class="view madlibView hidden">
+		<div class="wrapper">
+			<h2>Fill out this madlib for funzies!</h2>
+			<form action="" class="madlib">
+				<!-- to be filled by javascript -->
+			</form>
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+	<script src="scripts/hackerDead.js"></script>
+	<script src="scripts/script.js"></script>
+</body>
+
+</html>

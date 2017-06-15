@@ -1,0 +1,111 @@
+$nearWhite: #fafafa;
+
+@mixin fontSize($pixelSize) {
+	font-size: calc(#{$pixelSize} / 16 * 1rem);
+}
+
+
+body, html {
+	margin: 0;
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	font-size: 100%;
+	font-family: 'Montserrat', sans-serif;
+	background: url('../assets/homeBg.jpg');
+	background-size: cover;
+	background-position: center;
+	color: $nearWhite;
+	letter-spacing: 0.8px;
+}
+
+.view {
+	display: flex;
+	flex-direction: column;
+    justify-content: center;
+    align-items: center;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	transition: visibility 0s linear 0.3s, opacity 0.3s 0.3s;
+}
+
+h1, h2, h3 {
+	margin: 0;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 0.3rem;
+	color: $nearWhite;
+	text-shadow: 2px 2px 2px rgb(40,40,40);
+}
+
+h1 {
+	@include fontSize(50);
+	text-shadow: 2px 2px 2px rgb(52, 79, 109);
+}
+
+h2 {
+	@include fontSize(36);
+}
+
+p {
+	margin: 0;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+}
+
+.wrapper {
+	max-width: 1180px;
+	min-width: 310px;
+	padding: 20px;
+	background-color: rgba(160, 85, 76, 0.95);
+	border-radius: 5px;
+	box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.6);
+}
+
+.italicize {
+	font-style: italic;
+	color: $nearWhite;
+}
+
+.sub-header {
+    margin: 25px 0;
+    text-align: center;
+    @include fontSize(20);
+}
+
+button {
+	font-family: 'Montserrat', sans-serif;
+	border-style: none;
+	background: $nearWhite;
+	color: rgba(160, 85, 76, 0.95);
+	border-radius: 2px;
+	padding: 10px;
+    outline: none;
+    margin: 10px 0;
+}
+
+label {
+    text-transform: capitalize;
+}
+
+input {
+	border-style: none;
+	border-radius: 2px;
+	text-align: center;
+	padding: 4px;
+	&::placeholder {
+		color: rosybrown;
+	}
+}
+
+.hidden {
+	visibility: hidden;
+	opacity: 0;
+	transition: visibility 0s linear 0.3s, opacity 0.3s;
+}
