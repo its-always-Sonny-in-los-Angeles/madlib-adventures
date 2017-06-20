@@ -17,6 +17,7 @@
 	}
 	button {
 		position: absolute;
+		left: 0;
 		background: transparent;
         @include fontSize(18);
 		width: 100%;

@@ -262,6 +262,7 @@ input {
     overflow: hidden; }
   .storyList button {
     position: absolute;
+    left: 0;
     background: transparent;
     font-size: calc(18 / 16 * 1rem);
     width: 100%;
